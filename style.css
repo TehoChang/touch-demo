@@ -1,0 +1,12 @@
+/* canvas默认样式是inline-block */
+
+#xxx{
+    background: green;
+    display:block;  /*没用*/
+    margin:0px; 
+    /* 不要用css来控制canvas宽高，因为得到的只是等比缩放 */
+}
+body{
+    margin:0px;
+}
+
