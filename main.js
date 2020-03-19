@@ -14,6 +14,33 @@ let context=canvas.getContext('2d');//获取2d上下文，来作画
 
 listenToUser(canvas);
 
+pen.onclick=function(){
+    pen.classList.add('active');
+    eraser.classList.remove('active');
+}
+eraser.onclick=function(){
+    eraser.classList.add('active');
+    pen .classList.remove('active');
+}
+
+red.onclick=function(){
+    context.strokeStyle="red";
+    red.classList.add('active');
+    green.classList.remove('active')
+    blue.classList.remove('active')
+}
+green.onclick=function(){
+    context.strokeStyle="green";
+    green.classList.add('active');
+    red.classList.remove('active')
+    blue.classList.remove('active')
+}
+blue.onclick=function(){
+    context.strokeStyle="blue";
+    blue.classList.add('active');
+    red.classList.remove('active')
+    green.classList.remove('active')
+}
 //只有用这个属性才能做成全屏画布
 setCanvasSize();
 
@@ -65,7 +92,7 @@ function drawLine(x1,y1,x2,y2){
     context.moveTo(x1,y1);
     context.lineTo(x2,y2);
     context.lineWidth=4;
-    context.strokeStyle='black';
+    // context.strokeStyle='green'; //不把筆的顏色寫死 
     context.stroke();
     context.closePath();
 }

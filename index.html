@@ -11,12 +11,24 @@
     <canvas id="xxx">
 
     </canvas>
-    
-
-    
+    <div class="actions">
+       <svg id="pen" class="icon active" aria-hidden="true">   <!--加入active，讓筆默認有有高亮-->
+            <use xlink:href="#icon-bi"></use>
+        </svg> 
+        <svg id="eraser" class="icon2" aria-hidden="true">
+            <use xlink:href="#icon-eraser"></use>
+        </svg>
+    </div>
+    <ol class="colors">
+        <li id="red" class="red"></li>
+        <li id="green" class="green"></li>
+        <li id="blue" class="blue"></li>
+    </ol>
     <script src="./main.js"> 
     //重点大坑！！放在底部，放在上面有bug
     //元素不能自闭合，html5要求元素成对出现
     </script>
+    <script src="https://at.alicdn.com/t/font_1699686_zqdfoixhqd.js"></script>
+    <!--必須是https協議，如果是file(local)協議就會報錯 -->
 </body>
 </html>

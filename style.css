@@ -1,12 +1,85 @@
-/* canvas默认样式是inline-block */
 
+ul, ol{list-style: none;}
+*{margin:0; padding:0}
+/* 將所有格式清乾淨 */
+
+
+
+/* canvas默认样式是inline-block */
 #xxx{
-    background: green;
+    background: white;
     display:block;  /*没用*/
     margin:0px; 
     /* 不要用css来控制canvas宽高，因为得到的只是等比缩放 */
 }
 body{
     margin:0px;
+    overflow:hidden /*禁用滚动*/
 }
 
+.actions{
+    position:fixed;
+    top:10px;
+    left:20px;
+    padding-left:5px;
+    transition:all 0.3S; /*慢慢變大*/ 
+    
+}
+.actions svg.active{
+    fill:green;
+    transform: scale(1.2); /*(點擊放大)*/  
+}
+
+.actions svg{
+    margin:0 3px; /*增加兩個圖標的間距*/
+
+}
+
+.icon {
+    width: 2em; height: 2em;
+    vertical-align: -0.15em;
+    fill:currentColor;
+    overflow: hidden;
+    top:10px;
+ }
+ .icon2 {
+    width: 1.5em; height: 2em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+
+ .colors{
+     position:fixed;
+     top:55px;
+     left:36px;
+     
+ }
+
+ .colors>li{
+     width:20px;
+     height:20px;
+     
+     box-shadow:0 0 2 px rgba(0, 0, 0, 0.2);
+     margin:10px 0px;
+     border-radius:50%; /*重點:記寫法*/
+     transition: all 0.5s;
+  
+ }
+
+
+ .colors>li.red{
+     background:red;
+ }
+ .colors>li.green{
+    background:green;
+}
+.colors>li.blue{
+    background:blue;
+}
+
+.colors>li.active{
+    transform: scale(1.3);
+
+
+}
